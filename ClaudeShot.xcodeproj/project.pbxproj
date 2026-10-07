@@ -1,0 +1,245 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A1B1C1D1E1F1A2B2C2D2E2F2 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B1C1D1E1F1A2B2C2D2E2F3 /* main.swift */; };
+		A1B1C1D1E1F1A2B2C2D2E210 /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = A1B1C1D1E1F1A2B2C2D2E211 /* AppIcon.icns */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A1B1C1D1E1F1A2B2C2D2E2F3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		A1B1C1D1E1F1A2B2C2D2E2F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1B1C1D1E1F1A2B2C2D2E2F5 /* ClaudeShot.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ClaudeShot.entitlements; sourceTree = "<group>"; };
+		A1B1C1D1E1F1A2B2C2D2E2F6 /* ClaudeShot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClaudeShot.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1B1C1D1E1F1A2B2C2D2E211 /* AppIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = AppIcon.icns; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A1B1C1D1E1F1A2B2C2D2E2F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A1B1C1D1E1F1A2B2C2D2E2F8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A1B1C1D1E1F1A2B2C2D2E2F6 /* ClaudeShot.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A1B1C1D1E1F1A2B2C2D2E2F9 /* ClaudeShot */ = {
+			isa = PBXGroup;
+			children = (
+				A1B1C1D1E1F1A2B2C2D2E2F3 /* main.swift */,
+				A1B1C1D1E1F1A2B2C2D2E2F4 /* Info.plist */,
+				A1B1C1D1E1F1A2B2C2D2E2F5 /* ClaudeShot.entitlements */,
+				A1B1C1D1E1F1A2B2C2D2E211 /* AppIcon.icns */,
+			);
+			path = ClaudeShot;
+			sourceTree = "<group>";
+		};
+		A1B1C1D1E1F1A2B2C2D2E2FA /* MainGroup */ = {
+			isa = PBXGroup;
+			children = (
+				A1B1C1D1E1F1A2B2C2D2E2F9 /* ClaudeShot */,
+				A1B1C1D1E1F1A2B2C2D2E2F8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A1B1C1D1E1F1A2B2C2D2E2FB /* ClaudeShot */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1B1C1D1E1F1A2B2C2D2E2FC /* Build configuration list for PBXNativeTarget "ClaudeShot" */;
+			buildPhases = (
+				A1B1C1D1E1F1A2B2C2D2E2FD /* Sources */,
+				A1B1C1D1E1F1A2B2C2D2E2FE /* Resources */,
+				A1B1C1D1E1F1A2B2C2D2E2F7 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ClaudeShot;
+			productName = ClaudeShot;
+			productReference = A1B1C1D1E1F1A2B2C2D2E2F6 /* ClaudeShot.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A1B1C1D1E1F1A2B2C2D2E2FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					A1B1C1D1E1F1A2B2C2D2E2FB = {
+						CreatedOnToolsVersion = 16.0;
+						DevelopmentTeam = 2Q4WUR9QSK;
+					};
+				};
+			};
+			buildConfigurationList = A1B1C1D1E1F1A2B2C2D2E200 /* Build configuration list for PBXProject "ClaudeShot" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A1B1C1D1E1F1A2B2C2D2E2FA;
+			productRefGroup = A1B1C1D1E1F1A2B2C2D2E2F8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A1B1C1D1E1F1A2B2C2D2E2FB /* ClaudeShot */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A1B1C1D1E1F1A2B2C2D2E2FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1B1C1D1E1F1A2B2C2D2E210 /* AppIcon.icns in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A1B1C1D1E1F1A2B2C2D2E2FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1B1C1D1E1F1A2B2C2D2E2F2 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A1B1C1D1E1F1A2B2C2D2E201 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A1B1C1D1E1F1A2B2C2D2E202 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		A1B1C1D1E1F1A2B2C2D2E203 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2Q4WUR9QSK;
+				INFOPLIST_FILE = ClaudeShot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Carbon,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.otto.claudeshot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		A1B1C1D1E1F1A2B2C2D2E204 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 2Q4WUR9QSK;
+				INFOPLIST_FILE = ClaudeShot/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					Carbon,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.otto.claudeshot;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A1B1C1D1E1F1A2B2C2D2E200 /* Build configuration list for PBXProject "ClaudeShot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1B1C1D1E1F1A2B2C2D2E201 /* Debug */,
+				A1B1C1D1E1F1A2B2C2D2E202 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1B1C1D1E1F1A2B2C2D2E2FC /* Build configuration list for PBXNativeTarget "ClaudeShot" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1B1C1D1E1F1A2B2C2D2E203 /* Debug */,
+				A1B1C1D1E1F1A2B2C2D2E204 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = A1B1C1D1E1F1A2B2C2D2E2FF /* Project object */;
+}

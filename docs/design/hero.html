@@ -1,0 +1,122 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>ClaudeShot hero</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1200px; height: 640px; overflow: hidden; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif;
+    background:
+      radial-gradient(700px 480px at 900px 360px, rgba(224,133,46,0.20), transparent 70%),
+      radial-gradient(500px 400px at 120px 80px, rgba(120,120,160,0.10), transparent 70%),
+      #0D0D10;
+    color: #F2F2F5; position: relative;
+  }
+  .left { position: absolute; left: 72px; top: 92px; width: 500px; }
+  .icon { width: 104px; height: 104px; margin-left: -10px; }
+  h1 { font-size: 64px; font-weight: 800; letter-spacing: -1.5px; margin-top: 10px; }
+  .tag { font-size: 23px; line-height: 1.38; color: #BDBDC7; margin-top: 12px; font-weight: 450; }
+  .tag b { color: #F2F2F5; font-weight: 650; }
+  .keys { display: flex; gap: 10px; margin-top: 30px; align-items: center; }
+  .key { min-width: 54px; height: 50px; padding: 0 14px; border-radius: 11px; display: flex;
+         align-items: center; justify-content: center; font-size: 22px; font-weight: 600; color: #EDEDF2;
+         background: linear-gradient(#2C2C33, #1F1F25); border: 1px solid rgba(255,255,255,0.13);
+         box-shadow: 0 3px 0 #0A0A0C, inset 0 1px 0 rgba(255,255,255,0.08); }
+  .plus { color: #6E6E78; font-size: 20px; }
+  .brew { margin-top: 30px; display: inline-flex; align-items: center; gap: 12px; padding: 13px 18px;
+          border-radius: 12px; background: #16161B; border: 1px solid rgba(255,255,255,0.10);
+          font-family: "SF Mono", Menlo, monospace; font-size: 16.5px; color: #E8E8EE; }
+  .brew .p { color: #E0852E; }
+  .foot { margin-top: 18px; font-size: 14.5px; color: #7C7C88; letter-spacing: 0.2px; }
+
+  .screen { position: absolute; left: 616px; top: 70px; width: 532px; height: 470px; border-radius: 20px;
+            background: #1A1A20; border: 1px solid rgba(255,255,255,0.10); overflow: hidden;
+            box-shadow: 0 40px 90px rgba(0,0,0,0.55); }
+  .menubar { height: 26px; background: rgba(255,255,255,0.05); display: flex; align-items: center;
+             justify-content: flex-end; padding: 0 14px; gap: 14px; }
+  .menubar svg { width: 15px; height: 15px; }
+  .menubar .t { font-size: 11.5px; color: #9A9AA6; }
+  .editor { position: absolute; left: 26px; top: 50px; width: 480px; height: 300px; border-radius: 12px;
+            background: #111116; border: 1px solid rgba(255,255,255,0.08);
+            filter: blur(1.6px) brightness(0.55); }
+  .tl { display: flex; gap: 7px; padding: 12px 14px; }
+  .tl i { width: 11px; height: 11px; border-radius: 50%; display: block; }
+  .code { font-family: "SF Mono", Menlo, monospace; font-size: 12.5px; line-height: 21px; padding: 4px 18px; color: #C9C9D3; }
+  .k { color: #C792EA; } .f { color: #82AAFF; } .s { color: #C3E88D; } .c { color: #676E95; }
+  .err { background: rgba(255,90,90,0.16); border-left: 3px solid #FF6B6B; margin: 2px -18px; padding: 0 15px; color: #FF9B9B; }
+  .dim { position: absolute; inset: 26px 0 0 0; background: rgba(0,0,0,0.30); }
+  .bar { position: absolute; left: 36px; top: 162px; width: 460px; height: 64px; border-radius: 17px;
+         background: rgba(28,28,30,0.97); border: 1px solid rgba(255,255,255,0.16);
+         box-shadow: 0 18px 40px rgba(0,0,0,0.55); display: flex; align-items: center; padding: 0 12px; gap: 12px; }
+  .thumb { width: 60px; height: 44px; border-radius: 7px; border: 1px solid rgba(255,255,255,0.24);
+           background: #111116; overflow: hidden; position: relative; flex: none; }
+  .thumb .l { position: absolute; left: 6px; height: 3px; border-radius: 2px; background: #5E6390; }
+  .typed { font-size: 15px; color: #FFFFFF; flex: 1; white-space: nowrap; }
+  .caret { display: inline-block; width: 2px; height: 18px; background: #E0852E; vertical-align: -3px; margin-left: 1px; }
+  .hint { font-size: 11px; color: rgba(255,255,255,0.32); font-weight: 600; white-space: nowrap; }
+  .dock { position: absolute; left: 50%; transform: translateX(-50%); bottom: 14px; height: 64px; padding: 0 12px;
+          border-radius: 18px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.10);
+          display: flex; align-items: center; gap: 10px; }
+  .app { width: 46px; height: 46px; border-radius: 11px; background: #2A2A31; }
+  .claude { background: linear-gradient(#F2A157, #D9731F); display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 0 0 3px rgba(224,133,46,0.35), 0 0 24px rgba(224,133,46,0.55); }
+  .claude svg { width: 26px; height: 26px; }
+  .lab { position: absolute; bottom: 86px; right: 120px; font-size: 12px; font-weight: 700; color: #F1B37A;
+         background: rgba(20,20,24,0.92); border: 1px solid rgba(224,133,46,0.45); padding: 5px 10px; border-radius: 8px; }
+  .trail { position: absolute; left: 0; top: 0; width: 532px; height: 470px; pointer-events: none; }
+  .steps { position: absolute; left: 616px; top: 560px; width: 532px; display: flex; justify-content: space-between;
+           font-size: 13.5px; color: #8C8C98; font-weight: 600; }
+  .steps span b { color: #E0852E; margin-right: 6px; }
+</style></head>
+<body>
+  <div class="left">
+    <img class="icon" src="icon.svg" alt="">
+    <h1>ClaudeShot</h1>
+    <p class="tag">Screenshot anything on your Mac and send it to <b>Claude Desktop</b>, with your question, in <b>one shortcut</b>.</p>
+    <div class="keys"><div class="key">⌘</div><span class="plus">+</span><div class="key">⇧</div><span class="plus">+</span><div class="key" style="min-width:120px">Space</div></div>
+    <div class="brew"><span class="p">$</span>brew install --cask apfeet/tap/claudeshot</div>
+    <p class="foot">macOS 13+ &nbsp;·&nbsp; Apple Silicon &amp; Intel &nbsp;·&nbsp; free &amp; open source</p>
+  </div>
+
+  <div class="screen">
+    <div class="menubar">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#E6E6EC" stroke-width="2.2" stroke-linecap="round"><path d="M4 9V6a2 2 0 0 1 2-2h3M15 4h3a2 2 0 0 1 2 2v3M4 15v3a2 2 0 0 0 2 2h3M15 20h3a2 2 0 0 0 2-2v-3"/><circle cx="12" cy="12" r="2.6" fill="#E6E6EC" stroke="none"/></svg>
+      <span class="t">Tue 9:41</span>
+    </div>
+    <div class="editor">
+      <div class="tl"><i style="background:#FF5F57"></i><i style="background:#FEBC2E"></i><i style="background:#28C840"></i></div>
+      <div class="code">
+        <div><span class="k">const</span> users = <span class="k">await</span> <span class="f">fetchUsers</span>()</div>
+        <div><span class="c">// render the list</span></div>
+        <div><span class="k">return</span> users.data.<span class="f">map</span>(u =&gt; (</div>
+        <div class="err">TypeError: Cannot read properties of undefined (reading 'map')</div>
+        <div>&nbsp;&nbsp;&lt;<span class="f">Row</span> name={u.<span class="s">name</span>} /&gt;</div>
+        <div>))</div>
+        <div><span class="k">export default</span> <span class="f">UserList</span></div>
+      </div>
+    </div>
+    <div class="dim"></div>
+    <div class="bar">
+      <div class="thumb">
+        <div class="l" style="top:8px;width:34px"></div><div class="l" style="top:15px;width:22px"></div>
+        <div class="l" style="top:22px;width:44px;background:#FF6B6B"></div><div class="l" style="top:29px;width:28px"></div>
+        <div class="l" style="top:36px;width:18px"></div>
+      </div>
+      <div class="typed">Why does this crash?<span class="caret"></span></div>
+      <div class="hint">⏎ send &nbsp;·&nbsp; esc cancel</div>
+    </div>
+    <svg class="trail" viewBox="0 0 532 470">
+      <path d="M 300 236 C 360 300, 470 300, 420 384" fill="none" stroke="#E0852E" stroke-width="2.4" stroke-dasharray="5 7" stroke-linecap="round" opacity="0.85"/>
+      <g transform="translate(401 302) rotate(70) scale(1.45)">
+        <polygon points="26,-10 -14,6 1,9" fill="#F2A157"/>
+        <polygon points="26,-10 1,9 6,22" fill="#C4621A"/>
+      </g>
+    </svg>
+    <div class="lab">Claude Desktop</div>
+    <div class="dock">
+      <div class="app"></div><div class="app" style="background:#2F3A4A"></div><div class="app" style="background:#2B3B33"></div>
+      <div class="app claude"><svg viewBox="0 0 24 24" fill="#FFF"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.6 3.6c-.5.4-1.4.1-1.4-.6V5.5z"/></svg></div>
+      <div class="app"></div>
+    </div>
+  </div>
+  <div class="steps"><span><b>1</b>Select an area</span><span><b>2</b>Type your question</span><span><b>3</b>It lands in Claude</span></div>
+</body></html>

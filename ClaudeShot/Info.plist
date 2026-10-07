@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleName</key>
+    <string>ClaudeShot</string>
+
+    <key>CFBundleDisplayName</key>
+    <string>ClaudeShot</string>
+
+    <key>CFBundleIdentifier</key>
+    <string>com.otto.claudeshot</string>
+
+    <key>CFBundleVersion</key>
+    <string>1</string>
+
+    <key>CFBundleShortVersionString</key>
+    <string>1.0.0</string>
+
+    <key>CFBundlePackageType</key>
+    <string>APPL</string>
+
+    <key>CFBundleExecutable</key>
+    <string>ClaudeShot</string>
+
+    <key>NSPrincipalClass</key>
+    <string>NSApplication</string>
+
+    <!-- App solo menu bar: nessuna icona nel Dock -->
+    <key>LSUIElement</key>
+    <true/>
+
+    <key>CFBundleIconFile</key>
+    <string>AppIcon</string>
+
+    <key>NSHighResolutionCapable</key>
+    <true/>
+
+    <!-- Necessario per NSAppleScript -->
+    <key>NSAppleScriptEnabled</key>
+    <true/>
+
+    <!-- Stringa di privacy per Screen Recording (macOS 10.15+) -->
+    <key>NSScreenCaptureUsageDescription</key>
+    <string>ClaudeShot captures the area of the screen you select and sends it to Claude Desktop.</string>
+</dict>
+</plist>
