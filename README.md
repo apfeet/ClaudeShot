@@ -25,13 +25,13 @@ With [Homebrew](https://brew.sh):
 brew install --cask apfeet/tap/claudeshot
 ```
 
-Or download `ClaudeShot-1.0.0.zip` from the [latest release](https://github.com/apfeet/ClaudeShot/releases/latest), unzip it and move `ClaudeShot.app` to `/Applications`. The app is not notarized by Apple, so the first time macOS will refuse to open it: either right-click the app and choose **Open**, or run
+Or download `ClaudeShot-1.0.0.zip` from the [latest release](https://github.com/apfeet/ClaudeShot/releases/latest), unzip it and move `ClaudeShot.app` to `/Applications`.
+
+ClaudeShot is free and not notarized by Apple, so the **first time** you open it (whichever way you installed it) macOS blocks it. Go to **System Settings → Privacy & Security**, scroll down and click **Open Anyway**. Or, in Terminal:
 
 ```bash
 xattr -dr com.apple.quarantine /Applications/ClaudeShot.app
 ```
-
-(The Homebrew cask does this for you.)
 
 **You also need [Claude Desktop](https://claude.ai/download)** installed.
 
